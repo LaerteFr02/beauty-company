@@ -1,0 +1,55 @@
+<div class="container">
+    <h1>AGENDAMENTO DE SERVIÇO</h1>
+    <form [formGroup]="agendamentoForm" (ngSubmit)="createAgendamento()">
+        <div class ="form-group">
+            <label for="name">Nome completo</label><br>
+            <input type='text' formControlName='name' class='form-control'>
+        </div>
+        <pre></pre>
+        <div class ="form-group">
+            <label for="service">Serviço</label><br>
+            <select formControlName='service' class='form-control'> 
+                <option value="alisamento">Alisamento</option>
+                <option value="Manicure">Manicure</option>
+                <option value="corte">Corte</option>
+            </select>
+        </div>
+        <pre></pre>
+        <div class ="form-group">
+            <label for="date">Data</label><br>
+            <select formControlName='date' class='form-control'> 
+                <option value="segunda">Segunda</option>
+                <option value="terca">Terça</option>
+                <option value="quarta">Quarta</option>
+                <option value="quinta">Quinta</option>
+                <option value="sexta">Sexta</option>
+            </select>
+        </div>
+        <pre></pre>
+        <div class ="form-group">
+            <label for="time">Hora</label><br>
+            <select formControlName='time' class='form-control'> 
+                <option value="nove">9 as 10</option>
+                <option value="dez">10 as 11</option>
+                <option value="onze">11 as 12</option>
+                <option value="catorze">14 as 15</option>
+                <option value="quinze">15 as 16</option>
+                <option value="dezesseis">16 as 17</option>
+                <option value="dezessete">17 as 18</option>
+                <option value="dezoito">18 as 19</option>
+            </select>
+        </div>
+        <pre></pre>
+        <div class ="form-group">
+            <label for="payment">Forma de Pagamento</label><br>
+            <select formControlName='payment' class='form-control'> 
+                <option value="debito">Cartão - Débito</option>
+                <option value="credito">Cartao - Crédito</option>
+                <option value="dinheiro">Dinheiro</option>
+                <option value="pix">PIX</option>
+            </select>
+        </div>
+        <pre></pre>
+        <button type="submit">Agendar</button>
+    </form>
+</div>
