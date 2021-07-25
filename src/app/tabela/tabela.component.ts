@@ -16,7 +16,7 @@ export class TabelaComponent implements AfterViewInit {
   dataSource: TabelaDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['nome', 'servico', 'data', 'hora', 'pagamento'];
 
   constructor() {
     this.dataSource = new TabelaDataSource();

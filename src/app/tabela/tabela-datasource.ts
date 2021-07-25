@@ -7,31 +7,24 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 // TODO: Replace this with your own data model type
 export interface TabelaItem {
   name: string;
-  id: number;
+  servico: string;
+  data: string;
+  hora: string;
+  pagamento: string;
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: TabelaItem[] = [
-  {id: 1, name: 'Hydrogen'},
-  {id: 2, name: 'Helium'},
-  {id: 3, name: 'Lithium'},
-  {id: 4, name: 'Beryllium'},
-  {id: 5, name: 'Boron'},
-  {id: 6, name: 'Carbon'},
-  {id: 7, name: 'Nitrogen'},
-  {id: 8, name: 'Oxygen'},
-  {id: 9, name: 'Fluorine'},
-  {id: 10, name: 'Neon'},
-  {id: 11, name: 'Sodium'},
-  {id: 12, name: 'Magnesium'},
-  {id: 13, name: 'Aluminum'},
-  {id: 14, name: 'Silicon'},
-  {id: 15, name: 'Phosphorus'},
-  {id: 16, name: 'Sulfur'},
-  {id: 17, name: 'Chlorine'},
-  {id: 18, name: 'Argon'},
-  {id: 19, name: 'Potassium'},
-  {id: 20, name: 'Calcium'},
+  {name: 'Ana Paula Rodrigues', servico: 'Mão e pé', data: 'Segunda', hora: '9 as 10', pagamento: 'Cartão - Crédito'},
+  {name: 'Cleiton Alves Feitosa', servico: 'Corte masculino', data: 'Quarta', hora: '15 as 16', pagamento: 'Cartão - Débito'},
+  {name: 'David Oliveira de Carvalho', servico: 'Corte masculino', data: 'Sexta', hora: '17 as 18', pagamento: 'PIX'},
+  {name: 'Karine Maria Gonçalves Cortez', servico: 'Corte de cabelo', data: 'Quarta', hora: '15 as 16', pagamento: 'Dinheiro'},
+  {name: 'Gustavo Pereira dos Santos', servico: 'Corte masculino', data: 'Sexta', hora: '9 as 10', pagamento: 'Dinheiro'},
+  {name: 'Daniel dos Santos Rocha', servico: 'Corte masculino', data: 'Segunda', hora: '17 as 18', pagamento: 'Cartão - Débito'},
+  {name: 'Alcione Monteiro Lucas Germino', servico: 'Mão e pé', data: 'Segunda', hora: '11 as 12', pagamento: 'PIX'},
+  {name: 'Cláudia de Lira Melo', servico: 'Mão e pé', data: 'Terça', hora: '9 as 10', pagamento: 'Cartão - Débito'},
+  {name: 'Fabiana Flávia da Silva', servico: 'Tintura de cabelo', data: 'Quarta', hora: '15 as 16', pagamento: 'PIX'},
+  {name: 'Jonas Augusto de Barros Chaves', servico: 'Corte masculino', data: 'Terça', hora: '15 as 16', pagamento: 'Cartão - Débito'}
 ];
 
 /**
@@ -98,7 +91,6 @@ export class TabelaDataSource extends DataSource<TabelaItem> {
       const isAsc = this.sort?.direction === 'asc';
       switch (this.sort?.active) {
         case 'name': return compare(a.name, b.name, isAsc);
-        case 'id': return compare(+a.id, +b.id, isAsc);
         default: return 0;
       }
     });
