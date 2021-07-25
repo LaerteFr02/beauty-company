@@ -4,21 +4,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormularioComponent } from './formulario/formulario.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { HeaderComponent } from './components/template/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import{MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from'@angular/material/list';
+import { MatListModule } from '@angular/material/list';
 import { TabelaComponent } from './tabela/tabela.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { MatSortModule } from '@angular/material/sort';
     FooterComponent,
     NavComponent,
     FormularioComponent,
-    TabelaComponent
+    TabelaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import { MatSortModule } from '@angular/material/sort';
     ReactiveFormsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
