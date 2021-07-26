@@ -1,0 +1,16 @@
+<div class="banner">
+  <div class="container">
+    <h4>AGENDE SEU SERVIÇO</h4>
+    <div class="row">
+      <div class="col-md-4 p-4" *ngFor="let servico of servicos">
+        <div class="banner_item align-items-center" style="background-image:url({{servico.imgPath}})">
+          <img class="card-img-top img-responsive">
+          <div class="banner_category">
+            <a href="#">{{ servico.nome }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

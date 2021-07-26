@@ -4,7 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { TabelaComponent } from './tabela/tabela.component';
 
 const routes: Routes = [
-  //{ path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
   { path: 'tabela', component: TabelaComponent },

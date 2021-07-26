@@ -21,6 +21,11 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { LoginComponent } from './login/login.component';
+import { ServicoComponent } from './servico/servico.component';
+import { ProdutosComponent } from './produtos/produtos.component';
+import { BlogComponent } from './blog/blog.component';
+import { SliderComponent } from './slider/slider.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +35,12 @@ import { LoginComponent } from './login/login.component';
     NavComponent,
     FormularioComponent,
     TabelaComponent,
-    LoginComponent
+    LoginComponent,
+    ServicoComponent,
+    ProdutosComponent,
+    BlogComponent,
+    SliderComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
