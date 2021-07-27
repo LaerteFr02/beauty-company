@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-//import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
+import { FormularioService } from './formulario.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-formulario',
@@ -10,10 +12,11 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class FormularioComponent implements OnInit {
   
   
-  @Input() agendamentoForm!: FormGroup;
-  //dateConfig: BsDatepickerConfig = new BsDatepickerConfig();
   
-  constructor() { }
+  @Input() agendamentoForm!: FormGroup;
+  
+  
+  constructor(private formularioService: FormularioService, private router: Router) { }
 
   ngOnInit(): void {this.agendamentoForm = new FormGroup({
     name: new FormControl(),
@@ -22,11 +25,19 @@ export class FormularioComponent implements OnInit {
     time: new FormControl(),
     payment: new FormControl()
   });
-  //this.dateConfig.containerClass = 'theme-dark-blue';
+  
   }
 
   createAgendamento() {
-    console.log(this.agendamentoForm.value);
-    this.agendamentoForm.reset();
+    this.formularioService.create(this.agendamentoForm.value).subscribe(() => {
+      this.formularioService.showMessage("Agendamento realizado");
+      console.log(this.agendamentoForm.value);
+      this.agendamentoForm.reset();
+      this.router.navigate(['/login']);
+    });   
+  }
+
+  cancel(): void{
+    this.router.navigate(['/login']);
   }
 }

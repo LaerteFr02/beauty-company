@@ -9,9 +9,13 @@
         <div class ="form-group">
             <label for="service">Serviço</label><br>
             <select formControlName='service' class='form-control'> 
-                <option value="alisamento">Alisamento</option>
+                <option value="Alisamento">Alisamento</option>
                 <option value="Manicure">Manicure</option>
-                <option value="corte">Corte</option>
+                <option value="Corte de cabelo">Corte de cabelo</option>
+                <option value="Maquiagem">Maquiagem</option>
+                <option value="Depilação">Depilação</option>
+                <option value="Barbearia">Barbearia</option>
+
             </select>
         </div>
         <pre></pre>
@@ -51,5 +55,6 @@
         </div>
         <pre></pre>
         <button type="submit">Agendar</button>
+        <button (click)="cancel()">Cancelar</button>
     </form>
 </div>

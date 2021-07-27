@@ -17,9 +17,11 @@ export class LoginComponent implements OnInit {
   }
 
   doLogin(): void {
-    if (this.requestLogin.usuario == "teste" && this.requestLogin.senha == "lets_code")
-      this.router.navigate(['/tabela']);
-    else
+    if (this.requestLogin.usuario == "admin" && this.requestLogin.senha == "admin")
+      {this.router.navigate(['/tabela']);
+   } else if (this.requestLogin.usuario == "cliente" && this.requestLogin.senha == "cliente")
+      {this.router.navigate(['/formulario']);
+   } else
       alert("Usuário ou senha inválidos! Verifique seus dados.");
   }
 

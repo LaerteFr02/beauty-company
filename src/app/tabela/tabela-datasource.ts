@@ -3,28 +3,22 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
+import { Formulario } from '../formulario/formulario.model';
 
 // TODO: Replace this with your own data model type
-export interface TabelaItem {
-  name: string;
-  servico: string;
-  data: string;
-  hora: string;
-  pagamento: string;
-}
 
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: TabelaItem[] = [
-  {name: 'Ana Paula Rodrigues', servico: 'Mão e pé', data: 'Segunda', hora: '9 as 10', pagamento: 'Cartão - Crédito'},
-  {name: 'Cleiton Alves Feitosa', servico: 'Corte masculino', data: 'Quarta', hora: '15 as 16', pagamento: 'Cartão - Débito'},
-  {name: 'David Oliveira de Carvalho', servico: 'Corte masculino', data: 'Sexta', hora: '17 as 18', pagamento: 'PIX'},
-  {name: 'Karine Maria Gonçalves Cortez', servico: 'Corte de cabelo', data: 'Quarta', hora: '15 as 16', pagamento: 'Dinheiro'},
-  {name: 'Gustavo Pereira dos Santos', servico: 'Corte masculino', data: 'Sexta', hora: '9 as 10', pagamento: 'Dinheiro'},
-  {name: 'Daniel dos Santos Rocha', servico: 'Corte masculino', data: 'Segunda', hora: '17 as 18', pagamento: 'Cartão - Débito'},
-  {name: 'Alcione Monteiro Lucas Germino', servico: 'Mão e pé', data: 'Segunda', hora: '11 as 12', pagamento: 'PIX'},
-  {name: 'Cláudia de Lira Melo', servico: 'Mão e pé', data: 'Terça', hora: '9 as 10', pagamento: 'Cartão - Débito'},
-  {name: 'Fabiana Flávia da Silva', servico: 'Tintura de cabelo', data: 'Quarta', hora: '15 as 16', pagamento: 'PIX'},
-  {name: 'Jonas Augusto de Barros Chaves', servico: 'Corte masculino', data: 'Terça', hora: '15 as 16', pagamento: 'Cartão - Débito'}
+const EXAMPLE_DATA: Formulario[] = [
+  {name: 'Ana Paula Rodrigues', service: 'Mão e pé', date: 'Segunda', time: '9 as 10', payment: 'Cartão - Crédito'},
+  {name: 'Cleiton Alves Feitosa', service: 'Corte masculino', date: 'Quarta', time: '15 as 16', payment: 'Cartão - Débito'},
+  {name: 'David Oliveira de Carvalho', service: 'Corte masculino', date: 'Sexta', time: '17 as 18', payment: 'PIX'},
+  {name: 'Karine Maria Gonçalves Cortez', service: 'Corte de cabelo', date: 'Quarta', time: '15 as 16', payment: 'Dinheiro'},
+  {name: 'Gustavo Pereira dos Santos', service: 'Corte masculino', date: 'Sexta', time: '9 as 10', payment: 'Dinheiro'},
+  {name: 'Daniel dos Santos Rocha', service: 'Corte masculino', date: 'Segunda', time: '17 as 18', payment: 'Cartão - Débito'},
+  {name: 'Alcione Monteiro Lucas Germino', service: 'Mão e pé', date: 'Segunda', time: '11 as 12', payment: 'PIX'},
+  {name: 'Cláudia de Lira Melo', service: 'Mão e pé', date: 'Terça', time: '9 as 10', payment: 'Cartão - Débito'},
+  {name: 'Fabiana Flávia da Silva', service: 'Tintura de cabelo', date: 'Quarta', time: '15 as 16', payment: 'PIX'},
+  {name: 'Jonas Augusto de Barros Chaves', service: 'Corte masculino', date: 'Terça', time: '15 as 16', payment: 'Cartão - Débito'}
 ];
 
 /**
@@ -32,8 +26,8 @@ const EXAMPLE_DATA: TabelaItem[] = [
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
-export class TabelaDataSource extends DataSource<TabelaItem> {
-  data: TabelaItem[] = EXAMPLE_DATA;
+export class TabelaDataSource extends DataSource<Formulario> {
+  data: Formulario[] = EXAMPLE_DATA;
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
 
@@ -46,7 +40,7 @@ export class TabelaDataSource extends DataSource<TabelaItem> {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect(): Observable<TabelaItem[]> {
+  connect(): Observable<Formulario[]> {
     if (this.paginator && this.sort) {
       // Combine everything that affects the rendered data into one update
       // stream for the data-table to consume.
@@ -69,7 +63,7 @@ export class TabelaDataSource extends DataSource<TabelaItem> {
    * Paginate the data (client-side). If you're using server-side pagination,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getPagedData(data: TabelaItem[]): TabelaItem[] {
+  private getPagedData(data: Formulario[]): Formulario[] {
     if (this.paginator) {
       const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
       return data.splice(startIndex, this.paginator.pageSize);
@@ -82,7 +76,7 @@ export class TabelaDataSource extends DataSource<TabelaItem> {
    * Sort the data (client-side). If you're using server-side sorting,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getSortedData(data: TabelaItem[]): TabelaItem[] {
+  private getSortedData(data: Formulario[]): Formulario[] {
     if (!this.sort || !this.sort.active || this.sort.direction === '') {
       return data;
     }
