@@ -30,6 +30,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { LabelAgendamentoComponent } from './label-agendamento/label-agendamento.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     SliderComponent,
     PageNotFoundComponent,
     LayoutComponent,
+    LabelAgendamentoComponent,
   ],
   imports: [
     BrowserModule,
