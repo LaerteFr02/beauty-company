@@ -1,3 +1,19 @@
-.full-width-table {
+
+.footer {
+  width:100%;
+  position:fixed;
+  bottom:0px;
+}
+
+.agendamentos{
+  background-color:#f2f2f2;
+  height: 300px;
   width: 100%;
+}
+
+.text-table{
+  text-transform: uppercase;
+  font-size: 15px;
+  color: white;
+  background-color: black;
 }

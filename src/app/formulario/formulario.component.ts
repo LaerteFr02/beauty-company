@@ -10,12 +10,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent implements OnInit {
-  
-  
-  
+
+
+
   @Input() agendamentoForm!: FormGroup;
-  
-  
+
+
   constructor(private formularioService: FormularioService, private router: Router) { }
 
   ngOnInit(): void {this.agendamentoForm = new FormGroup({
@@ -25,7 +25,7 @@ export class FormularioComponent implements OnInit {
     time: new FormControl(),
     payment: new FormControl()
   });
-  
+
   }
 
   createAgendamento() {
@@ -33,8 +33,8 @@ export class FormularioComponent implements OnInit {
       this.formularioService.showMessage("Agendamento realizado");
       console.log(this.agendamentoForm.value);
       this.agendamentoForm.reset();
-      this.router.navigate(['/login']);
-    });   
+      this.router.navigate(['/nav']);
+    });
   }
 
   cancel(): void{

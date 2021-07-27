@@ -18,6 +18,15 @@ const EXAMPLE_DATA: Formulario[] = [
   {name: 'Alcione Monteiro Lucas Germino', service: 'Mão e pé', date: 'Segunda', time: '11 as 12', payment: 'PIX'},
   {name: 'Cláudia de Lira Melo', service: 'Mão e pé', date: 'Terça', time: '9 as 10', payment: 'Cartão - Débito'},
   {name: 'Fabiana Flávia da Silva', service: 'Tintura de cabelo', date: 'Quarta', time: '15 as 16', payment: 'PIX'},
+  {name: 'Jonas Augusto de Barros Chaves', service: 'Corte masculino', date: 'Terça', time: '15 as 16', payment: 'Cartão - Débito'},
+  {name: 'Cleiton Alves Feitosa', service: 'Corte masculino', date: 'Quarta', time: '15 as 16', payment: 'Cartão - Débito'},
+  {name: 'David Oliveira de Carvalho', service: 'Corte masculino', date: 'Sexta', time: '17 as 18', payment: 'PIX'},
+  {name: 'Karine Maria Gonçalves Cortez', service: 'Corte de cabelo', date: 'Quarta', time: '15 as 16', payment: 'Dinheiro'},
+  {name: 'Gustavo Pereira dos Santos', service: 'Corte masculino', date: 'Sexta', time: '9 as 10', payment: 'Dinheiro'},
+  {name: 'Daniel dos Santos Rocha', service: 'Corte masculino', date: 'Segunda', time: '17 as 18', payment: 'Cartão - Débito'},
+  {name: 'Alcione Monteiro Lucas Germino', service: 'Mão e pé', date: 'Segunda', time: '11 as 12', payment: 'PIX'},
+  {name: 'Cláudia de Lira Melo', service: 'Mão e pé', date: 'Terça', time: '9 as 10', payment: 'Cartão - Débito'},
+  {name: 'Fabiana Flávia da Silva', service: 'Tintura de cabelo', date: 'Quarta', time: '15 as 16', payment: 'PIX'},
   {name: 'Jonas Augusto de Barros Chaves', service: 'Corte masculino', date: 'Terça', time: '15 as 16', payment: 'Cartão - Débito'}
 ];
 

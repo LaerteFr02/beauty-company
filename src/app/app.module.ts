@@ -26,6 +26,11 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { BlogComponent } from './blog/blog.component';
 import { SliderComponent } from './slider/slider.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LayoutComponent } from './layout/layout.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +45,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ProdutosComponent,
     BlogComponent,
     SliderComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +61,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatPaginatorModule,
     MatSortModule,
     HttpClientModule,
+    MatButtonModule,
+    MatCardModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

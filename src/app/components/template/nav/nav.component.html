@@ -4,6 +4,7 @@
 <header class="header trans_300">
 
   <!-- Top Navigation -->
+
     <div class="top_nav">
       <div class="container">
         <div class="row">
@@ -22,8 +23,7 @@
                     <i class="fa fa-angle-down"></i>
                   </a>
                   <ul class="account_selection">
-                    <a routerLink="/login" routerLinkActive="selected">Login</a><br>
-                    <li><a href='#' [routerLink]="['/logar']"><i class="fa fa-sign-in" aria-hidden="true"></i>Logar</a></li>
+                    <li><a [routerLink]="['/login']"><i class="fa fa-sign-in" aria-hidden="true"></i>Logar</a></li>
                     <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Registrar</a></li>
                   </ul>
                 </li>
@@ -36,7 +36,6 @@
 
   <!-- Main Navigation -->
 
-  <form class="form" (ngSubmit)="logar()">
     <div class="main_nav_container">
       <div class="container">
         <div class="row">
@@ -55,7 +54,7 @@
               </ul>
               <ul class="navbar_user">
                 <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                <li><a [routerLink]="['/login']"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                 <li class="checkout">
                   <a href="#">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -71,33 +70,30 @@
         </div>
       </div>
     </div>
-  </form>
 </header>
 
-<form class="form" (ngSubmit)="logar()">
   <div class="fs_menu_overlay"></div>
-    <div class="hamburger_menu">
-      <div class="hamburger_close"><i class="fa fa-times" aria-hidden="true"></i></div>
-      <div class="hamburger_menu_content text-right">
-        <ul class="menu_top_nav">
-          <li class="menu_item has-children">
-            <a href="#">
-              Minha Conta
-              <i class="fa fa-angle-down"></i>
-            </a>
-            <ul class="menu_selection">
-              <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Logar</a></li>
-              <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Registrar</a></li>
-            </ul>
-          </li>
-          <li class="menu_item"><a href="#">home</a></li>
-          <li class="menu_item"><a href="#">shop</a></li>
-          <!-- <li class="menu_item"><a href="#">promotion</a></li>
-          <li class="menu_item"><a href="#">pages</a></li>
-          <li class="menu_item"><a href="#">blog</a></li> -->
-          <li class="menu_item"><a href="#">contato</a></li>
-        </ul>
-      </div>
+  <div class="hamburger_menu">
+    <div class="hamburger_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+    <div class="hamburger_menu_content text-right">
+      <ul class="menu_top_nav">
+        <li class="menu_item has-children">
+          <a href="#">
+            Minha Conta
+            <i class="fa fa-angle-down"></i>
+          </a>
+          <ul class="menu_selection">
+            <li><a [routerLink]="['/login']"><i class="fa fa-sign-in" aria-hidden="true"></i>Logar</a></li>
+            <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Registrar</a></li>
+          </ul>
+        </li>
+        <li class="menu_item"><a href="#">home</a></li>
+        <li class="menu_item"><a href="#">shop</a></li>
+        <!-- <li class="menu_item"><a href="#">promotion</a></li>
+        <li class="menu_item"><a href="#">pages</a></li>
+        <li class="menu_item"><a href="#">blog</a></li> -->
+        <li class="menu_item"><a href="#">contato</a></li>
+      </ul>
     </div>
-</form>
+  </div>
 

@@ -5,7 +5,7 @@ import { MatTable } from '@angular/material/table';
 import { TabelaDataSource } from './tabela-datasource';
 import { FormularioService } from '../formulario/formulario.service';
 import { Formulario } from '../formulario/formulario.model';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-tabela',
   templateUrl: './tabela.component.html',
