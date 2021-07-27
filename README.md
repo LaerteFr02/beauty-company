@@ -1,6 +1,7 @@
 # BeautyCompany
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version (12.1.1) <br>
+The application (**web**) will run on port 4200. <br>
 
 ## Development server
 
@@ -10,18 +11,35 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Building and Running app
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To build and start the apps', run in your terminal:
+`$ ng serve -o`
 
-## Running unit tests
+### Enabling api fake
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+As there is no database, to make the simulation we created a .json file to be able to store our information coming from the form and show it in the table
 
-## Running end-to-end tests
+Preparing fake api, navigate
+`$ cd app/src/backend`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Run, which will create the dependencies
+`$ npm init -y`
 
-## Further help
+To enable the fake api in development mode, you need to navigate to the backend folder
+`$ cd app/src/backend`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To enable the fake api in development mode, you need to run the system terminal:
+`$ npm start`
+
+### How to run the app
+
+Navigate to the beauty company project folder
+
+Run
+`$ ng serve -o`
+
+Start the fake api in the steps above, run the command inside the bakcend directory
+`$ npm start`
+
+Now you can access the app through [http://localhost:4200](http://localhost:4200).

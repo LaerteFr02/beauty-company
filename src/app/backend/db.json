@@ -15,6 +15,14 @@
       "time": "dezoito",
       "payment": "pix",
       "id": 2
+    },
+    {
+      "name": "Laerte Fernandes Rosa",
+      "service": "Barbearia",
+      "date": "sexta",
+      "time": "nove",
+      "payment": "credito",
+      "id": 3
     }
   ]
 }
